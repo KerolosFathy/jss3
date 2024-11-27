@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="img/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./bookmark-circle-background-icon-vector.jpg">
+    <title>Bookmarker</title>
+</head>
+<body>
+   <main>
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+      <h1 class="mt-5 position-relative ">Bookmarker</h1>
+      <div class="dotted-line mt-3"></div>
+      <div class="bookmark-body w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4">
+        <h2 class="bookmark "> <i class="fa-solid fa-bookmark"></i>Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+        <div class="site-name w-100 d-flex flex-column justify-content-center">
+        <label for="bookmarkName" class="pb-2 fw-semibold">
+          <i class="fa-solid fa-book-bookmark pe-2"></i>Site Name</label>
+        <input type="text" placeholder="Bookmark Name" class="form-control" id="name"/>
+        <div class="alert alert-danger d-none" id="AlertName" role="alert">
+          A simple danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+        </div>
+      </div>
+      <div class="site-url w-100 d-flex flex-column justify-content-center">
+        <label for="bookmarkURL" class="pb-2 fw-semibold">
+          <i class="fa-solid fa-link pe-2"></i>Site URL</label>
+        <input type="url" placeholder="Website URL" class="form-control" id="url"/>
+        <div class="alert alert-danger d-none" id="alertName" role="alert">
+          A simple danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+        </div>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-warning px-5 mt-3" onclick="Bookmark();checkInputEmpty()">Submit</button>
+      </div>
+      </div>
+    </div>
+    <div class="dotted-line"></div>
+      <table class="table text-center mt-5 container">
+        <thead>
+          <tr>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="demo"></tbody>
+      </table>
+    </main>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/mian.js"></script>
+</body>
+</html>
